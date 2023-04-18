@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.left{
+    height: 100vh;
+    width: 50vw;
+    /* border: 2px solid black; */
+}
+.right{
+    
+    height: 100vh;
+    width: 50vw;
+    display: flex; flex-direction: column; justify-content: center; 
+
+}
+.right h3{
+    font-size: 40px;
+    margin-top: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: bold;
+    
+}
+.right h6{
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.right p{
+    font-size: 13px;
+   /* font-family:  Haettenschweiler, 'Arial Narrow Bold', sans-serif;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+ .right .nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 10px;
+
+}
+.right .nav span{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin: 10px 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2;
+}
+.right .nav span.active{
+    border: 2px solid #000;
+    transform: scale(1.2);
+}
+.right .nav span.one,
+.right .nav i.one{
+    background: rgb(157, 216, 231);
+}
+.right .nav span.two,
+.right .nav i.two{
+    background: 	rgb(241, 131, 186);
+}
+.right .nav span.three,
+.right .nav i.three{
+    background: rgb(243, 172, 66);
+}
+.right .nav span.active+i
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    mix-blend-mode: hue;   
+
+}
+.left img{
+    position: absolute;
+    top: 60%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    max-width: 300px;
+}
+
+.file-upload{
+    display: flex;  justify-content: center; margin-top: 5%;
+}
+.custom-file-upload {
+    display: inline-block;
+    background-color: #05050521;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+  }
+label{
+    position: absolute; z-index: 5;font-size: 50px;
+}
+
+
+.logo {
+    width: 20px;
+    height: 30px;
+    background-image: url('logo.png');
+    background-size: cover;
+    transition: transform 2s;
+    position: absolute;
+    top: 520px; left: 430px;
+}
+.rotate {
+    transform: rotate(360deg);
+}
+
+
+
+.loader {
+    width: 50px;
+    height: 50px;
+    margin: 0px auto;
+    margin-top: 300px; 
+    background-image: url('loader_icon.svg');
+    background-size: cover;
+    transition: transform 2s;
+    display: none;
+}
+.spin {
+    animation: spin 4s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(1200deg); }
+}
